@@ -1,18 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
 
       {/* Hero */}
       <section className="flex flex-col items-center justify-center text-center min-h-screen px-6">
+
         <Image
-  src="/logo.svg"
-  alt="Sniper Techno Logo"
-  width={180}
-  height={180}
-  unoptimized
-  className="mb-8 rounded-full shadow-2xl shadow-red-600"
-/>
+          src="/logo.svg"
+          alt="Sniper Techno Logo"
+          width={180}
+          height={180}
+          unoptimized
+          className="mb-8 rounded-full shadow-2xl shadow-red-600"
+        />
+
         <h1 className="text-5xl md:text-7xl font-bold text-red-600">
           Sniper Techno
         </h1>
@@ -30,51 +34,106 @@ export default function Home() {
         <div className="flex gap-4 mt-10">
           <a
             href="#services"
-            className="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-xl font-bold duration-300"
+            className="bg-red-600 hover:bg-red-700 px-8 py-3 rounded-xl font-bold"
           >
             خدماتنا
           </a>
 
           <a
             href="#contact"
-            className="border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-8 py-3 rounded-xl duration-300"
+            className="border border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-8 py-3 rounded-xl"
           >
             تواصل معنا
           </a>
         </div>
-      </section>
 
+      </section>
       {/* Services */}
       <section id="services" className="py-20 px-8 bg-zinc-950">
+
         <h2 className="text-4xl font-bold text-center text-red-600 mb-14">
           خدماتنا
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-          {[
-            "البرامج الحسابية",
-            "نقاط البيع POS",
-            "عدادات النقود",
-            "قارئات الباركود",
-            "أجهزة الحضور والانصراف",
-            "حاسبات ولابتوبات",
-            "الطابعات",
-            "منظومات الطاقة الشمسية",
-          ].map((item) => (
-            <div
-              key={item}
-              className="bg-black border border-red-700 rounded-xl p-6 hover:scale-105 duration-300"
-            >
-              <h3 className="text-xl font-bold text-red-500 mb-3">
-                {item}
-              </h3>
+          {/* البرامج الحسابية */}
+          <Link
+            href="/software"
+            className="bg-black border border-red-700 rounded-xl p-6 hover:scale-105 duration-300 block"
+          >
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              البرامج الحسابية
+            </h3>
 
-              <p className="text-gray-400">
-                حلول احترافية بأفضل جودة وأسعار منافسة.
-              </p>
-            </div>
-          ))}
+            <p className="text-gray-400">
+              اضغط للدخول إلى البرامج الحسابية
+            </p>
+          </Link>
+
+          <div className="bg-black border border-red-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              نقاط البيع POS
+            </h3>
+            <p className="text-gray-400">
+              حلول احترافية بأفضل جودة وأسعار منافسة.
+            </p>
+          </div>
+
+          <div className="bg-black border border-red-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              عدادات النقود
+            </h3>
+            <p className="text-gray-400">
+              حلول احترافية بأفضل جودة وأسعار منافسة.
+            </p>
+          </div>
+
+          <div className="bg-black border border-red-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              قارئات الباركود
+            </h3>
+            <p className="text-gray-400">
+              حلول احترافية بأفضل جودة وأسعار منافسة.
+            </p>
+          </div>
+
+          <div className="bg-black border border-red-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              أجهزة الحضور والانصراف
+            </h3>
+            <p className="text-gray-400">
+              حلول احترافية بأفضل جودة وأسعار منافسة.
+            </p>
+          </div>
+
+          <div className="bg-black border border-red-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              حاسبات ولابتوبات
+            </h3>
+            <p className="text-gray-400">
+              حلول احترافية بأفضل جودة وأسعار منافسة.
+            </p>
+          </div>
+
+          <div className="bg-black border border-red-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              الطابعات
+            </h3>
+            <p className="text-gray-400">
+              حلول احترافية بأفضل جودة وأسعار منافسة.
+            </p>
+          </div>
+
+          <div className="bg-black border border-red-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold text-red-500 mb-3">
+              منظومات الطاقة الشمسية
+            </h3>
+            <p className="text-gray-400">
+              حلول احترافية بأفضل جودة وأسعار منافسة.
+            </p>
+          </div>
+
         </div>
       </section>
 
