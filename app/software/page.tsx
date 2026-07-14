@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function SoftwarePage() {
+export default function softwarepage() {
   return (
     <main className="min-h-screen bg-black text-white px-6 py-20">
       <h1 className="text-5xl font-bold text-center text-red-600 mb-12">

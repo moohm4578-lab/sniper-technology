@@ -23,7 +23,7 @@ const features = [
   "الطابعات والميزان الإلكتروني",
 ];
 
-export default function SpeedoPage() {
+export default function speedoPage() {
 
   return (
     <main className="min-h-screen bg-black text-white px-6 py-20">
