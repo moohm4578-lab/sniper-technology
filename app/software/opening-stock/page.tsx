@@ -39,7 +39,7 @@ export default function OpeningStockPage() {
 
       <div className="flex justify-center mt-10">
         <Link
-          href="/software/speedo"
+          href="/software/Speedo"
           className="bg-red-600 px-8 py-3 rounded-lg hover:bg-red-700 transition"
         >
           رجوع
