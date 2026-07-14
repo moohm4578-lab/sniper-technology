@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function alraedPage() {
+export default function alraedpage() {
   return (
     <main className="min-h-screen bg-black text-white px-6 py-20">
 

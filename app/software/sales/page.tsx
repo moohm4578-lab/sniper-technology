@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 
-export default function SalesPage(){
+export default function salespage(){
 
 return (
 
