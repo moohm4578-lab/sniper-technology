@@ -10,7 +10,7 @@ export default function softwarepage() {
       <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
         <Link
-          href="/software/speedo"
+          href="/software/Speedo"
           className="bg-zinc-900 border border-red-700 rounded-xl p-8 hover:bg-red-700 duration-300"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -23,7 +23,7 @@ export default function softwarepage() {
         </Link>
 
         <Link
-          href="/software/alraed"
+          href="/software/Alraed"
           className="bg-zinc-900 border border-red-700 rounded-xl p-8 hover:bg-red-700 duration-300"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
