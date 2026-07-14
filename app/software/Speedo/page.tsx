@@ -1,54 +1,103 @@
+"use client";
+
 import Link from "next/link";
 
-export default function speedoPage() {
+const features = [
+  "المبيعات",
+  "تعدد العمليات",
+  "واجهة فاتورة المشتريات",
+  "واجهة الحسابات",
+  "واجهة كشف حساب",
+  "واجهة السندات",
+  "واجهة التقارير",
+  "واجهة الأقساط",
+  "واجهة النقل المخزني",
+  "واجهة إضافة العملاء",
+  "واجهة إضافة المواد",
+  "واجهة إضافة الأرصدة الأولية للمواد",
+  "التصحيح المخزني والتلف",
+  "واجهة إضافة المستخدمين",
+  "الحضور والانصراف",
+  "النسخ الاحتياطي",
+  "نماذج الطباعة",
+  "الطابعات والميزان الإلكتروني",
+];
+
+export default function SpeedoPage() {
+
   return (
     <main className="min-h-screen bg-black text-white px-6 py-20">
 
-      <h1 className="text-5xl font-bold text-red-600 text-center mb-10">
+      <h1 className="text-5xl font-bold text-red-600 text-center mb-6">
         سبيدو مبيعات
       </h1>
 
-      <div className="max-w-5xl mx-auto bg-zinc-900 border border-red-700 rounded-2xl p-8">
+      <p className="text-center text-gray-400 mb-12">
+        نظام متكامل لإدارة المبيعات والمخازن والحسابات.
+      </p>
 
-        <h2 className="text-3xl font-bold mb-6 text-white">
-          نظام سبيدو مبيعات
-        </h2>
 
-        <p className="text-gray-300 leading-8 mb-8">
-          برنامج متكامل لإدارة المحلات والشركات، يوفر إدارة المبيعات والمشتريات
-          والمخازن والعملاء والموردين والحسابات مع تقارير دقيقة وسهولة في الاستخدام.
-        </p>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
 
-        <h3 className="text-2xl text-red-500 font-bold mb-4">
-          المميزات
-        </h3>
+        {features.map((item,index)=>(
+          
+          index === 0 ? (
 
-        <ul className="space-y-3 text-gray-300">
-          <li>✅ إدارة المبيعات.</li>
-          <li>✅ إدارة المشتريات.</li>
-          <li>✅ إدارة المخازن.</li>
-          <li>✅ إدارة العملاء والموردين.</li>
-          <li>✅ تقارير يومية وشهرية.</li>
-          <li>✅ دعم الباركود والطابعات.</li>
-        </ul>
+            <Link
+              key={index}
+              href="/sales"
+              className="
+              bg-zinc-900 
+              border border-red-700 
+              rounded-xl 
+              p-5 
+              hover:bg-red-700 
+              transition
+              "
+            >
+              <h3 className="text-lg font-bold text-center">
+                {item}
+              </h3>
+            </Link>
+
+          ) : (
+
+            <div
+              key={index}
+              className="
+              bg-zinc-900 
+              border border-red-700 
+              rounded-xl 
+              p-5
+              "
+            >
+              <h3 className="text-lg font-bold text-center">
+                {item}
+              </h3>
+            </div>
+
+          )
+
+        ))}
 
       </div>
 
-      <div className="flex justify-center gap-4 mt-10">
+
+      <div className="flex justify-center mt-12">
 
         <Link
           href="/software"
-          className="bg-red-600 px-6 py-3 rounded-lg hover:bg-red-700 duration-300"
+          className="
+          bg-red-600 
+          px-8 
+          py-3 
+          rounded-lg 
+          hover:bg-red-700 
+          transition
+          "
         >
           رجوع
         </Link>
-
-        <a
-          href="tel:07706216017"
-          className="border border-red-600 px-6 py-3 rounded-lg hover:bg-red-600 duration-300"
-        >
-          اتصل الآن
-        </a>
 
       </div>
 
